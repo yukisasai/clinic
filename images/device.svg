@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000" role="img" aria-label="機器">
+  <defs>
+    <linearGradient id="b10" x1="0" y1="0" x2="0.35" y2="1">
+      <stop offset="0" stop-color="#1C222B"/><stop offset="1" stop-color="#2E3742"/>
+    </linearGradient>
+    <radialGradient id="l10" cx="0.41" cy="0.34" r="0.62">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="n10"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3"/>
+      <feColorMatrix type="saturate" values="0"/></filter>
+  </defs>
+  <rect width="1000" height="1000" fill="url(#b10)"/>
+  <ellipse cx="440" cy="360" rx="500" ry="420" fill="url(#l10)"/>
+  <rect width="1000" height="1000" filter="url(#n10)" opacity="0.06"/>
+  <line x1="450" y1="500" x2="550" y2="500"
+        stroke="#F7F5F1" stroke-opacity="0.28" stroke-width="1"/>
+  <text x="500" y="585" text-anchor="middle"
+        font-family="'Hiragino Mincho ProN',serif" font-size="50"
+        fill="#F7F5F1" fill-opacity="0.5" letter-spacing="12">機器</text>
+  <text x="500" y="645" text-anchor="middle"
+        font-family="'Jost',sans-serif" font-size="32"
+        fill="#F7F5F1" fill-opacity="0.3" letter-spacing="20">1000×1000</text>
+</svg>

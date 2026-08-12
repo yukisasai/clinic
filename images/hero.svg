@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1750" width="1400" height="1750" role="img" aria-label="メインビジュアル">
+  <defs>
+    <linearGradient id="b1" x1="0" y1="0" x2="0.35" y2="1">
+      <stop offset="0" stop-color="#EBE6DE"/><stop offset="1" stop-color="#F7F5F1"/>
+    </linearGradient>
+    <radialGradient id="l1" cx="0.425" cy="0.34" r="0.62">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.72"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="n1"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3"/>
+      <feColorMatrix type="saturate" values="0"/></filter>
+  </defs>
+  <rect width="1400" height="1750" fill="url(#b1)"/>
+  <ellipse cx="616" cy="630" rx="700" ry="735" fill="url(#l1)"/>
+  <rect width="1400" height="1750" filter="url(#n1)" opacity="0.045"/>
+  <line x1="630" y1="875" x2="770" y2="875"
+        stroke="#232A33" stroke-opacity="0.28" stroke-width="1"/>
+  <text x="700" y="994" text-anchor="middle"
+        font-family="'Hiragino Mincho ProN',serif" font-size="70"
+        fill="#232A33" fill-opacity="0.5" letter-spacing="16.8">メインビジュアル</text>
+  <text x="700" y="1078" text-anchor="middle"
+        font-family="'Jost',sans-serif" font-size="44.800000000000004"
+        fill="#232A33" fill-opacity="0.3" letter-spacing="28">1400×1750</text>
+</svg>

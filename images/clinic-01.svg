@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 750" width="1000" height="750" role="img" aria-label="診察室">
+  <defs>
+    <linearGradient id="b8" x1="0" y1="0" x2="0.35" y2="1">
+      <stop offset="0" stop-color="#EBE6DE"/><stop offset="1" stop-color="#F7F5F1"/>
+    </linearGradient>
+    <radialGradient id="l8" cx="0.39999999999999997" cy="0.34" r="0.62">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.72"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="n8"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3"/>
+      <feColorMatrix type="saturate" values="0"/></filter>
+  </defs>
+  <rect width="1000" height="750" fill="url(#b8)"/>
+  <ellipse cx="440" cy="270" rx="500" ry="315" fill="url(#l8)"/>
+  <rect width="1000" height="750" filter="url(#n8)" opacity="0.045"/>
+  <line x1="462.5" y1="375" x2="537.5" y2="375"
+        stroke="#232A33" stroke-opacity="0.28" stroke-width="1"/>
+  <text x="500" y="438.75" text-anchor="middle"
+        font-family="'Hiragino Mincho ProN',serif" font-size="37.5"
+        fill="#232A33" fill-opacity="0.5" letter-spacing="9">診察室</text>
+  <text x="500" y="483.75" text-anchor="middle"
+        font-family="'Jost',sans-serif" font-size="24"
+        fill="#232A33" fill-opacity="0.3" letter-spacing="15">1000×750</text>
+</svg>

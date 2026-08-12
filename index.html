@@ -1,0 +1,764 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>シミ・肝斑の医療治療｜白露皮膚科クリニック 銀座</title>
+<meta name="description" content="シミ・肝斑・くすみの医療治療。皮膚科専門医が肌質を診断し、ひとりずつ治療計画を組み立てます。初回カウンセリング無料・銀座駅徒歩3分。">
+<meta name="robots" content="noindex,nofollow">
+<meta name="format-detection" content="telephone=no">
+<meta name="theme-color" content="#232A33">
+<meta property="og:type" content="website">
+<meta property="og:title" content="シミ・肝斑の医療治療｜白露皮膚科クリニック 銀座">
+<meta property="og:description" content="皮膚科専門医が肌質を診断し、ひとりずつ治療計画を組み立てます。">
+<meta property="og:image" content="./images/og.svg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;600&family=Cormorant+Garamond:wght@300;400&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+/* ══════════════════════════════════════════════════════════════
+   白露皮膚科クリニック — シミ・肝斑治療LP
+   ──────────────────────────────────────────────────────────────
+   配色思想 : 白磁(paper) × 濃墨(sumi) × 珊瑚朱(coral)
+     朱は「朱肉＝証明の印」の連想を借りている。CTAとBefore/After
+     スライダーのハンドルだけに使い、ページ内で朱を独占させることで
+     視線が「押す場所」と「見せたい変化」の2点に集中する。
+     金(gold)は罫線と数値の下線のみ。面には決して使わない。
+   ══════════════════════════════════════════════════════════════ */
+
+:root{
+  --paper:#F7F5F1;
+  --paper-deep:#EFEBE4;
+  --paper-warm:#E4DED4;
+  --sumi:#232A33;
+  --sumi-soft:#5A6470;
+  --coral:#C25B4E;
+  --coral-deep:#A8483C;
+  --gold:#B08D57;
+  --line:rgba(35,42,51,.13);
+
+  --f-mincho:'Shippori Mincho B1','Hiragino Mincho ProN','Yu Mincho',serif;
+  --f-sans:system-ui,-apple-system,'Hiragino Sans','Noto Sans JP','Yu Gothic UI',sans-serif;
+  --f-num:'Cormorant Garamond',serif;
+  --f-label:'Jost',system-ui,sans-serif;
+
+  --fs-hero:clamp(1.9rem,7.6vw,3.4rem);
+  --fs-h2:clamp(1.4rem,5.6vw,2.15rem);
+  --fs-h3:clamp(1.05rem,4vw,1.3rem);
+  --fs-lead:clamp(.9375rem,3.6vw,1.0625rem);
+  --fs-sm:.8125rem;
+  --fs-xs:.6875rem;
+
+  --gut:1.375rem;
+  --sect:clamp(4rem,13vw,7rem);
+  --well:640px;
+  --wide:1120px;
+  --bar:76px;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--paper);color:var(--sumi);
+  font-family:var(--f-sans);font-size:.9375rem;line-height:1.95;
+  letter-spacing:.02em;padding-bottom:var(--bar);
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;height:auto;display:block}
+:focus-visible{outline:2px solid var(--coral);outline-offset:3px}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+}
+
+/* ── レイアウト ─────────────────────────────────────────────── */
+.sect{padding:var(--sect) var(--gut)}
+.sect--deep{background:var(--paper-deep)}
+.sect--sumi{background:var(--sumi);color:var(--paper)}
+.well{max-width:var(--well);margin-inline:auto}
+.wide{max-width:var(--wide);margin-inline:auto}
+
+/* ── 見出し ─────────────────────────────────────────────────── */
+.eyebrow{
+  font-family:var(--f-label);font-size:var(--fs-xs);font-weight:500;
+  letter-spacing:.28em;text-transform:uppercase;color:var(--gold);
+  margin:0 0 .85rem;display:flex;align-items:center;gap:.7rem;
+}
+.eyebrow::after{content:'';flex:1;height:1px;background:var(--gold);opacity:.35}
+.sect--sumi .eyebrow{color:var(--gold)}
+
+.h2{
+  font-family:var(--f-mincho);font-size:var(--fs-h2);font-weight:600;
+  line-height:1.58;letter-spacing:.045em;margin:0 0 1rem;
+}
+.h2 em{font-style:normal;color:var(--coral)}
+.sect--sumi .h2{color:var(--paper)}
+
+.lead{font-size:var(--fs-lead);color:var(--sumi-soft);margin:0 0 2.5rem}
+.sect--sumi .lead{color:rgba(247,245,241,.7)}
+.fine{font-size:var(--fs-sm);line-height:1.85;color:var(--sumi-soft);opacity:.85;margin:1.5rem 0 0}
+
+/* ── CTA ────────────────────────────────────────────────────── */
+.btn{
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:.1rem;width:100%;min-height:66px;padding:.9rem 1.5rem;border:0;
+  border-radius:2px;background:var(--coral);color:#fff;
+  font-family:var(--f-sans);font-size:1.0625rem;font-weight:700;letter-spacing:.08em;
+  text-decoration:none;cursor:pointer;position:relative;overflow:hidden;
+  box-shadow:0 2px 0 var(--coral-deep),0 10px 26px rgba(194,91,78,.26);
+  transition:transform .16s ease,box-shadow .16s ease;
+}
+.btn:hover{transform:translateY(-1px);box-shadow:0 3px 0 var(--coral-deep),0 14px 32px rgba(194,91,78,.32)}
+.btn:active{transform:translateY(2px);box-shadow:0 0 0 var(--coral-deep),0 6px 16px rgba(194,91,78,.2)}
+.btn small{font-size:.6875rem;font-weight:500;letter-spacing:.12em;opacity:.92}
+.btn[disabled]{opacity:.5;cursor:not-allowed;transform:none}
+
+/* ── ヘッダー ───────────────────────────────────────────────── */
+.hd{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:1rem var(--gut);border-bottom:1px solid var(--line);
+}
+.hd__mark{display:flex;align-items:baseline;gap:.6rem}
+.hd__ja{font-family:var(--f-mincho);font-size:1.0625rem;font-weight:600;letter-spacing:.16em}
+.hd__en{font-family:var(--f-label);font-size:.5625rem;letter-spacing:.24em;color:var(--sumi-soft)}
+.hd__tel{
+  font-family:var(--f-num);font-size:1.2rem;letter-spacing:.04em;
+  text-decoration:none;color:var(--sumi);white-space:nowrap;
+}
+.hd__tel span{display:block;font-family:var(--f-sans);font-size:.5625rem;letter-spacing:.14em;color:var(--sumi-soft)}
+
+/* ── ヒーロー ───────────────────────────────────────────────── */
+.hero{position:relative;background:linear-gradient(180deg,var(--paper-deep),var(--paper))}
+.hero__pic{position:relative;aspect-ratio:4/5;overflow:hidden}
+.hero__pic img{width:100%;height:100%;object-fit:cover}
+.hero__pic::after{
+  content:'';position:absolute;inset:auto 0 -1px 0;height:42%;
+  background:linear-gradient(180deg,transparent,var(--paper) 94%);
+}
+.hero__body{position:relative;margin-top:-4rem;padding:0 var(--gut) var(--sect)}
+
+/* 縦組みの副題。和文LPで最も「手で組んだ感」が出る箇所 */
+.hero__vert{
+  position:absolute;top:-13rem;right:var(--gut);
+  writing-mode:vertical-rl;font-family:var(--f-mincho);
+  font-size:.8125rem;letter-spacing:.32em;line-height:2.4;
+  color:var(--sumi);opacity:.5;
+}
+.hero__vert::before{content:'';display:block;width:1px;height:2.2rem;background:var(--gold);margin:0 auto .9rem}
+
+.hero__ttl{
+  font-family:var(--f-mincho);font-size:var(--fs-hero);font-weight:600;
+  line-height:1.5;letter-spacing:.045em;margin:0 0 1.1rem;
+}
+/* 蛍光ペンではなく「下に敷いた朱の帯」。品を落とさずに強調する。
+   ::after + z-index:-1 だと .hero の背景グラデーションの裏に回るため、
+   要素自身の background で敷く。 */
+.hero__ttl b{
+  font-weight:600;white-space:nowrap;
+  background:linear-gradient(transparent 62%,rgba(194,91,78,.19) 62%,rgba(194,91,78,.19) 92%,transparent 92%);
+  padding-inline:.06em;
+}
+.hero__sub{font-size:var(--fs-lead);color:var(--sumi-soft);margin:0 0 1.6rem;max-width:32em}
+
+.hero__proof{display:flex;gap:1.75rem;margin:0 0 1.75rem;padding:0;list-style:none;flex-wrap:wrap}
+.hero__proof li{border-left:1px solid var(--gold);padding-left:.85rem}
+.hero__proof b{
+  display:block;font-family:var(--f-num);font-size:2rem;font-weight:400;
+  line-height:1;letter-spacing:.01em;
+}
+.hero__proof b i{font-style:normal;font-size:.9375rem;font-family:var(--f-sans);margin-left:.15em}
+.hero__proof span{font-size:var(--fs-xs);letter-spacing:.1em;color:var(--sumi-soft)}
+
+.hero__cta{max-width:420px}
+.hero__note{margin:.85rem 0 0;font-size:var(--fs-sm);color:var(--sumi-soft)}
+
+@media(min-width:880px){
+  .hero{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2rem,5vw,4.5rem);
+        align-items:center;max-width:var(--wide);margin-inline:auto;padding:2.5rem var(--gut) var(--sect)}
+  .hero__pic{aspect-ratio:3/4;order:2}
+  .hero__pic::after{display:none}
+  .hero__body{margin-top:0;padding:0;order:1}
+  .hero__vert{display:none}
+}
+
+/* ── 悩みチェック ───────────────────────────────────────────── */
+.chips{display:flex;flex-wrap:wrap;gap:.55rem;padding:0;margin:0 0 1.75rem;list-style:none}
+.chip{
+  display:inline-flex;align-items:center;gap:.55rem;padding:.72rem 1.05rem;
+  border:1px solid var(--line);border-radius:2px;background:var(--paper);
+  color:var(--sumi);font-family:inherit;font-size:.875rem;line-height:1.4;
+  text-align:left;cursor:pointer;
+  transition:border-color .15s ease,background .15s ease;
+}
+.chip::before{
+  content:'';flex:none;width:15px;height:15px;border:1px solid rgba(35,42,51,.3);
+  transition:inherit;
+}
+.chip[aria-pressed="true"]{border-color:var(--coral);background:rgba(194,91,78,.06);font-weight:600}
+.chip[aria-pressed="true"]::before{
+  border-color:var(--coral);background:var(--coral)
+  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M2.4 6.2l2.3 2.3 4.9-5' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/10px no-repeat;
+}
+.tally{
+  display:none;align-items:center;gap:.7rem;padding:.95rem 1.15rem;
+  border:1px solid rgba(194,91,78,.28);background:rgba(194,91,78,.05);
+  font-size:var(--fs-sm);
+}
+.tally[data-on="true"]{display:flex}
+.tally b{font-family:var(--f-num);font-size:1.5rem;font-weight:400;color:var(--coral);line-height:1}
+.tally a{margin-left:auto;flex:none;font-weight:700;color:var(--coral);text-underline-offset:4px}
+
+/* ══ シグネチャー : Before/After スライダー ═════════════════════ */
+.ba{margin:0;padding:0}
+.ba__stage{
+  position:relative;aspect-ratio:1;overflow:hidden;border-radius:2px;
+  background:var(--paper-warm);touch-action:pan-y;cursor:ew-resize;user-select:none;
+}
+.ba__stage img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none}
+/* 上に重ねた after 側を clip-path で削って before を覗かせる */
+.ba__after{clip-path:inset(0 0 0 var(--pos,50%))}
+.ba__tag{
+  position:absolute;top:.7rem;padding:.22rem .6rem;background:rgba(35,42,51,.78);
+  color:var(--paper);font-family:var(--f-label);font-size:.5625rem;
+  letter-spacing:.18em;pointer-events:none;
+}
+.ba__tag--b{left:.7rem}
+.ba__tag--a{right:.7rem;background:var(--coral)}
+.ba__handle{
+  position:absolute;top:0;bottom:0;left:var(--pos,50%);width:2px;
+  background:var(--coral);transform:translateX(-1px);pointer-events:none;
+}
+.ba__grip{
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  width:42px;height:42px;border-radius:50%;background:var(--coral);
+  display:grid;place-items:center;color:#fff;
+  box-shadow:0 3px 14px rgba(35,42,51,.3);
+}
+.ba__grip svg{width:19px;height:19px}
+.ba__range{position:absolute;inset:0;width:100%;opacity:0;cursor:ew-resize;margin:0}
+.ba__meta{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;margin-top:.9rem}
+.ba__ttl{font-family:var(--f-mincho);font-size:1rem;font-weight:600;margin:0}
+.ba__cond{font-size:var(--fs-xs);color:var(--sumi-soft);letter-spacing:.06em;text-align:right;flex:none}
+.ba-grid{display:grid;gap:2.5rem;padding:0;margin:0;list-style:none}
+@media(min-width:760px){.ba-grid{grid-template-columns:1fr 1fr;gap:2rem}}
+
+/* ── 治療方針（診療科らしい対比表） ─────────────────────────── */
+.vs{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);margin:0 0 1.5rem}
+.vs__row{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line)}
+.vs__cell{background:var(--paper);padding:1.05rem 1.1rem}
+.vs__cell--on{background:rgba(194,91,78,.05)}
+.vs__head{
+  font-family:var(--f-label);font-size:var(--fs-xs);letter-spacing:.18em;
+  color:var(--sumi-soft);margin:0 0 .3rem;
+}
+.vs__cell--on .vs__head{color:var(--coral)}
+.vs__cell p{margin:0;font-size:var(--fs-sm);line-height:1.8}
+.vs__cell--on p{font-weight:600}
+
+/* ── 医師 ───────────────────────────────────────────────────── */
+.doc{display:grid;gap:1.5rem}
+.doc__pic{border-radius:2px;overflow:hidden;aspect-ratio:3/4;max-width:280px}
+.doc__pic img{width:100%;height:100%;object-fit:cover}
+.doc__name{font-family:var(--f-mincho);font-size:1.35rem;font-weight:600;margin:0 0 .2rem;letter-spacing:.06em}
+.doc__name span{font-family:var(--f-label);font-size:.625rem;letter-spacing:.2em;color:var(--sumi-soft);display:block;margin-top:.35rem}
+.doc__role{font-size:var(--fs-sm);color:var(--coral);margin:0 0 1rem;letter-spacing:.06em}
+.doc__quote{
+  font-family:var(--f-mincho);font-size:1.0625rem;line-height:2;letter-spacing:.04em;
+  margin:0 0 1.1rem;padding-left:1rem;border-left:2px solid var(--gold);
+}
+.doc__career{
+  display:grid;grid-template-columns:4.5em 1fr;gap:.35rem .8rem;
+  margin:0;font-size:var(--fs-sm);color:var(--sumi-soft);line-height:1.9;
+}
+.doc__career dt{font-family:var(--f-num);font-size:.9375rem;color:var(--gold)}
+.doc__career dd{margin:0}
+@media(min-width:760px){.doc{grid-template-columns:280px 1fr;gap:2.5rem;align-items:start}}
+
+/* ── 流れ ───────────────────────────────────────────────────── */
+.flow{padding:0;margin:0;list-style:none;display:grid;gap:1px;background:rgba(247,245,241,.14)}
+.flow li{background:var(--sumi);padding:1.4rem .2rem;display:grid;grid-template-columns:3.5rem 1fr;gap:1rem;align-items:start}
+.flow__no{font-family:var(--f-num);font-size:1.75rem;color:var(--gold);line-height:1;padding-top:.1rem;text-align:center}
+.flow__t{font-family:var(--f-mincho);font-size:1.0625rem;font-weight:600;margin:0 0 .3rem}
+.flow__d{margin:0;font-size:var(--fs-sm);color:rgba(247,245,241,.68);line-height:1.85}
+.flow__time{
+  display:inline-block;margin-top:.5rem;padding:.15rem .55rem;
+  border:1px solid rgba(176,141,87,.5);font-family:var(--f-label);
+  font-size:.5625rem;letter-spacing:.14em;color:var(--gold);
+}
+
+/* ── 料金 ───────────────────────────────────────────────────── */
+.plans{display:grid;gap:1rem;padding:0;margin:0 0 1rem;list-style:none}
+.plan{border:1px solid var(--line);background:var(--paper);padding:1.6rem 1.35rem;position:relative}
+.plan--on{border-color:var(--coral);border-width:1.5px}
+.plan__flag{
+  position:absolute;top:-.65rem;left:1.35rem;padding:.2rem .7rem;
+  background:var(--coral);color:#fff;font-size:.625rem;font-weight:700;letter-spacing:.1em;
+}
+.plan__n{font-family:var(--f-mincho);font-size:var(--fs-h3);font-weight:600;margin:0 0 .2rem;letter-spacing:.05em}
+.plan__d{font-size:var(--fs-sm);color:var(--sumi-soft);margin:0 0 .9rem}
+.plan__p{display:flex;align-items:baseline;gap:.25rem;font-family:var(--f-num);font-size:2.4rem;line-height:1.15;margin:0 0 1rem;
+  border-bottom:1px solid var(--gold);padding-bottom:.6rem}
+.plan__p i{font-style:normal;font-family:var(--f-sans);font-size:.8125rem;color:var(--sumi-soft)}
+.plan__f{padding:0;margin:0;list-style:none;display:grid;gap:.45rem;font-size:var(--fs-sm);line-height:1.7}
+.plan__f li{display:grid;grid-template-columns:16px 1fr;gap:.5rem;color:var(--sumi-soft)}
+.plan__f li::before{content:'';margin-top:.5em;width:10px;height:6px;border-left:1.5px solid var(--gold);border-bottom:1.5px solid var(--gold);transform:rotate(-45deg)}
+@media(min-width:860px){.plans{grid-template-columns:repeat(3,1fr);align-items:start}}
+
+/* ── FAQ ────────────────────────────────────────────────────── */
+.faq{border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{
+  display:grid;grid-template-columns:1.6rem 1fr 16px;align-items:start;gap:.8rem;
+  padding:1.2rem 0;font-size:.9375rem;font-weight:600;line-height:1.7;cursor:pointer;list-style:none;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::before{content:'Q';font-family:var(--f-num);font-size:1.15rem;color:var(--coral);line-height:1.4}
+.faq summary::after{content:'';margin-top:.6em;width:10px;height:10px;border-right:1.5px solid var(--sumi-soft);border-bottom:1.5px solid var(--sumi-soft);transform:rotate(45deg);transition:transform .2s ease}
+.faq details[open] summary::after{transform:rotate(-135deg)}
+.faq__a{display:grid;grid-template-columns:1.6rem 1fr;gap:.8rem;padding:0 0 1.3rem;font-size:var(--fs-sm);line-height:1.95;color:var(--sumi-soft)}
+.faq__a::before{content:'A';font-family:var(--f-num);font-size:1.15rem;color:var(--gold);line-height:1.4}
+
+/* ── フォーム ───────────────────────────────────────────────── */
+.form{display:grid;gap:1.15rem}
+.fld label{display:block;font-size:var(--fs-sm);font-weight:700;margin-bottom:.4rem;letter-spacing:.04em}
+.req,.opt{display:inline-block;margin-left:.45rem;padding:.06rem .42rem;font-size:.625rem;font-weight:700;vertical-align:.1em}
+.req{background:var(--coral);color:#fff}
+.opt{background:rgba(35,42,51,.1);color:var(--sumi-soft)}
+.fld input,.fld select,.fld textarea{
+  width:100%;padding:.92rem 1rem;border:1px solid var(--line);border-radius:2px;
+  background:#fff;color:var(--sumi);font-family:inherit;font-size:1rem;line-height:1.6;
+}
+.fld textarea{min-height:118px;resize:vertical}
+.fld input:focus,.fld select:focus,.fld textarea:focus{border-color:var(--coral);outline:none}
+.fld .err{display:none;margin:.35rem 0 0;font-size:var(--fs-sm);color:#B3261E}
+.fld[data-bad="true"] input,.fld[data-bad="true"] textarea{border-color:#B3261E}
+.fld[data-bad="true"] .err{display:block}
+.privacy{font-size:var(--fs-sm);line-height:1.85;color:var(--sumi-soft);margin:0}
+.status{display:none;padding:.9rem 1rem;font-size:var(--fs-sm);line-height:1.8;background:#FCEDEB;color:#8C2B20}
+.status[data-on]{display:block}
+.done{display:none;text-align:center;padding:3rem 1.25rem;background:#fff;border:1px solid var(--line)}
+.done[data-on="true"]{display:block}
+.done__m{width:54px;height:54px;margin:0 auto;border-radius:50%;background:var(--coral);display:grid;place-items:center;color:#fff}
+.done h3{font-family:var(--f-mincho);font-size:var(--fs-h3);margin:1.1rem 0 .5rem;letter-spacing:.05em}
+.done p{margin:0;font-size:var(--fs-sm);color:var(--sumi-soft)}
+
+/* ── フッター ───────────────────────────────────────────────── */
+.ft{background:var(--sumi);color:rgba(247,245,241,.82);padding:var(--sect) var(--gut) 2.5rem}
+.ft__mark{text-align:center;margin-bottom:2rem}
+.ft__ja{font-family:var(--f-mincho);font-size:1.2rem;font-weight:600;letter-spacing:.2em;color:var(--paper)}
+.ft__en{font-family:var(--f-label);font-size:.5625rem;letter-spacing:.28em;color:var(--gold);margin-top:.4rem}
+.ft__pic{aspect-ratio:4/3;overflow:hidden;margin-bottom:1.75rem;border-radius:2px}
+.ft__pic img{width:100%;height:100%;object-fit:cover}
+.ft dl{display:grid;grid-template-columns:5.5em 1fr;gap:.5rem 1rem;margin:0 0 2rem;font-size:var(--fs-sm);line-height:1.8}
+.ft dt{color:rgba(247,245,241,.5)}
+.ft dd{margin:0}
+.ft__cp{font-family:var(--f-label);font-size:.625rem;letter-spacing:.14em;text-align:center;opacity:.5;margin:0}
+
+/* ── 固定バー ───────────────────────────────────────────────── */
+.bar{
+  position:fixed;inset:auto 0 0 0;z-index:40;display:flex;align-items:center;gap:.7rem;
+  padding:.55rem var(--gut);padding-bottom:calc(.55rem + env(safe-area-inset-bottom,0px));
+  background:rgba(247,245,241,.93);backdrop-filter:blur(14px);
+  border-top:1px solid var(--line);transform:translateY(112%);
+  transition:transform .3s cubic-bezier(.22,1,.36,1);
+}
+.bar[data-on="true"]{transform:none}
+.bar__tel{
+  flex:none;display:grid;place-items:center;width:56px;height:56px;
+  border:1px solid var(--line);border-radius:2px;text-decoration:none;color:var(--sumi);
+}
+.bar__tel svg{width:20px;height:20px}
+.bar__tel span{font-family:var(--f-label);font-size:.5rem;letter-spacing:.1em;margin-top:.1rem}
+.bar .btn{min-height:56px;font-size:.9375rem}
+
+/* ── スクロール表出 ─────────────────────────────────────────── */
+.rv{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s cubic-bezier(.22,1,.36,1)}
+.rv[data-in="true"]{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none}}
+.sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+</style>
+</head>
+
+<body>
+
+<header class="hd">
+  <div class="hd__mark">
+    <span class="hd__ja">白露皮膚科クリニック</span>
+    <span class="hd__en">HAKURO</span>
+  </div>
+  <a class="hd__tel" href="tel:0312345678">03-1234-5678<span>受付 10:00–19:00</span></a>
+</header>
+
+<!-- ════ ヒーロー ════ -->
+<section class="hero">
+  <div class="hero__pic">
+    <img src="./images/hero.svg" alt="診察を受ける女性" width="1400" height="1750" fetchpriority="high">
+  </div>
+  <div class="hero__body">
+    <p class="hero__vert">その一点を、<br>医療で薄くする。</p>
+    <h1 class="hero__ttl">消えないシミには、<br><b>理由</b>があります。</h1>
+    <p class="hero__sub">シミ・肝斑・くすみは、見た目が似ていても原因が違います。市販品で変わらなかった肌を、皮膚科専門医が診断からやり直します。</p>
+    <ul class="hero__proof">
+      <li><b>12<i>年</i></b><span>ESTABLISHED</span></li>
+      <li><b>9,400<i>件</i></b><span>TREATMENTS</span></li>
+      <li><b>3<i>分</i></b><span>FROM GINZA STN.</span></li>
+    </ul>
+    <div class="hero__cta">
+      <a class="btn" href="#contact" data-cta="hero">無料カウンセリングを予約する<small>所要 30分／オンライン相談も可</small></a>
+    </div>
+    <p class="hero__note">当日の勧誘・契約は行いません。持ち帰ってご検討ください。</p>
+  </div>
+</section>
+
+<!-- ════ 悩み ════ -->
+<section class="sect sect--deep" id="concerns">
+  <div class="well rv">
+    <p class="eyebrow">Check</p>
+    <h2 class="h2">思い当たるものを、<br>選んでみてください。</h2>
+    <p class="lead">選んだ内容はそのままご相談フォームに引き継がれます。うまく言葉にできなくても大丈夫です。</p>
+    <ul class="chips" id="chips">
+      <li><button type="button" class="chip" aria-pressed="false" data-l="頬に左右対称の薄い影がある">頬に左右対称の薄い影がある</button></li>
+      <li><button type="button" class="chip" aria-pressed="false" data-l="市販の美白化粧品で変わらなかった">市販の美白化粧品で変わらなかった</button></li>
+      <li><button type="button" class="chip" aria-pressed="false" data-l="レーザーを受けたが再発した">レーザーを受けたが再発した</button></li>
+      <li><button type="button" class="chip" aria-pressed="false" data-l="ファンデーションが厚くなった">ファンデーションが厚くなった</button></li>
+      <li><button type="button" class="chip" aria-pressed="false" data-l="ダウンタイムが取れるか不安">ダウンタイムが取れるか不安</button></li>
+      <li><button type="button" class="chip" aria-pressed="false" data-l="何の治療が合うか分からない">何の治療が合うか分からない</button></li>
+    </ul>
+    <div class="tally" id="tally" role="status">
+      <b data-n>0</b><span>件を選択中。この内容から診断を始めます。</span>
+      <a href="#contact" data-cta="tally">相談する</a>
+    </div>
+  </div>
+</section>
+
+<!-- ════ シグネチャー : Before/After ════ -->
+<section class="sect" id="cases">
+  <div class="wide rv">
+    <p class="eyebrow">Before / After</p>
+    <h2 class="h2">つまみを動かすと、<br><em>経過</em>が見えます。</h2>
+    <p class="lead">同一の照明・角度・カメラ設定で撮影しています。加工は行っていません。</p>
+
+    <ul class="ba-grid">
+      <li>
+        <figure class="ba">
+          <div class="ba__stage" data-ba style="--pos:50%">
+            <img src="./images/ba-01-before.svg" alt="治療前の頬" width="900" height="900" loading="lazy">
+            <img class="ba__after" src="./images/ba-01-after.svg" alt="治療後の頬" width="900" height="900" loading="lazy">
+            <span class="ba__tag ba__tag--b">BEFORE</span>
+            <span class="ba__tag ba__tag--a">AFTER</span>
+            <div class="ba__handle">
+              <div class="ba__grip">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6l-5 6 5 6M15 6l5 6-5 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+            </div>
+            <input class="ba__range" type="range" min="0" max="100" value="50" aria-label="比較スライダー：ドラッグして治療前後を切り替え">
+          </div>
+          <figcaption class="ba__meta">
+            <p class="ba__ttl">肝斑・頬の色ムラ</p>
+            <p class="ba__cond">40代／内服＋レーザートーニング8回<br>費用 176,000円（税込）</p>
+          </figcaption>
+        </figure>
+      </li>
+      <li>
+        <figure class="ba">
+          <div class="ba__stage" data-ba style="--pos:50%">
+            <img src="./images/ba-02-before.svg" alt="治療前の目もと" width="900" height="900" loading="lazy">
+            <img class="ba__after" src="./images/ba-02-after.svg" alt="治療後の目もと" width="900" height="900" loading="lazy">
+            <span class="ba__tag ba__tag--b">BEFORE</span>
+            <span class="ba__tag ba__tag--a">AFTER</span>
+            <div class="ba__handle">
+              <div class="ba__grip">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6l-5 6 5 6M15 6l5 6-5 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+            </div>
+            <input class="ba__range" type="range" min="0" max="100" value="50" aria-label="比較スライダー：ドラッグして治療前後を切り替え">
+          </div>
+          <figcaption class="ba__meta">
+            <p class="ba__ttl">老人性色素斑</p>
+            <p class="ba__cond">50代／Qスイッチレーザー1回<br>費用 33,000円（税込）</p>
+          </figcaption>
+        </figure>
+      </li>
+    </ul>
+
+    <p class="fine">
+      掲載症例はすべてご本人の同意を得た自由診療（保険適用外）の実例です。効果には個人差があり、同一の結果を保証するものではありません。
+      主なリスク・副作用：赤み、一時的な色素沈着、かさぶた、まれに水疱。詳細は診察時にご説明します。
+    </p>
+  </div>
+</section>
+
+<!-- ════ 治療方針 ════ -->
+<section class="sect sect--deep" id="policy">
+  <div class="well rv">
+    <p class="eyebrow">Policy</p>
+    <h2 class="h2">同じ「シミ」に、<br>同じ治療は当てません。</h2>
+    <p class="lead">肝斑にレーザーを当てると濃くなることがあります。まず何であるかを見極めることが、遠回りに見えていちばん早い方法です。</p>
+
+    <div class="vs">
+      <div class="vs__row">
+        <div class="vs__cell"><p class="vs__head">一般的な流れ</p><p>メニューから選んで施術</p></div>
+        <div class="vs__cell vs__cell--on"><p class="vs__head">白露の流れ</p><p>ダーモスコピーで種類を特定してから選ぶ</p></div>
+      </div>
+      <div class="vs__row">
+        <div class="vs__cell"><p class="vs__head">回数</p><p>あらかじめ決まった回数を契約</p></div>
+        <div class="vs__cell vs__cell--on"><p class="vs__head">回数</p><p>毎回の反応を見て、その都度組み替える</p></div>
+      </div>
+      <div class="vs__row">
+        <div class="vs__cell"><p class="vs__head">費用</p><p>コース一括前払い</p></div>
+        <div class="vs__cell vs__cell--on"><p class="vs__head">費用</p><p>都度払い。途中でやめられる</p></div>
+      </div>
+    </div>
+    <p class="fine">当院は自由診療のため保険は適用されません。表示価格はすべて税込です。</p>
+  </div>
+</section>
+
+<!-- ════ 医師 ════ -->
+<section class="sect" id="doctor">
+  <div class="wide rv">
+    <p class="eyebrow">Doctor</p>
+    <div class="doc">
+      <div class="doc__pic"><img src="./images/doctor.svg" alt="院長" width="900" height="1200" loading="lazy"></div>
+      <div>
+        <h2 class="doc__name">白木 咲良<span>SAKURA SHIRAKI</span></h2>
+        <p class="doc__role">院長／日本皮膚科学会 認定皮膚科専門医</p>
+        <p class="doc__quote">「消えます」とは言いません。<br>どこまで薄くなるかを、初回に数字でお伝えします。</p>
+        <dl class="doc__career">
+          <dt>2009</dt><dd>信州大学医学部 卒業</dd>
+          <dt>2011</dt><dd>同大学附属病院 皮膚科 入局</dd>
+          <dt>2016</dt><dd>都内美容皮膚科 医長</dd>
+          <dt>2021</dt><dd>白露皮膚科クリニック 開院</dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ 流れ ════ -->
+<section class="sect sect--sumi" id="flow">
+  <div class="well rv">
+    <p class="eyebrow">Flow</p>
+    <h2 class="h2">初回にかかる時間は、<br>およそ60分です。</h2>
+    <p class="lead">当日に治療を始めることもできますが、持ち帰って検討していただいて構いません。</p>
+    <ol class="flow">
+      <li><span class="flow__no">01</span><div><h3 class="flow__t">問診とカウンセリング</h3><p class="flow__d">気になっている箇所と、これまで試したことを伺います。<span class="flow__time">約20分</span></p></div></li>
+      <li><span class="flow__no">02</span><div><h3 class="flow__t">医師の診察・肌診断</h3><p class="flow__d">ダーモスコピーと肌画像診断で、シミの種類と深さを特定します。<span class="flow__time">約15分</span></p></div></li>
+      <li><span class="flow__no">03</span><div><h3 class="flow__t">治療計画と費用の提示</h3><p class="flow__d">想定回数・想定費用・想定される変化の程度を書面でお渡しします。<span class="flow__time">約15分</span></p></div></li>
+      <li><span class="flow__no">04</span><div><h3 class="flow__t">ご検討／当日施術</h3><p class="flow__d">その場で決めていただく必要はありません。<span class="flow__time">約10分</span></p></div></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ════ 料金 ════ -->
+<section class="sect" id="pricing">
+  <div class="wide rv">
+    <p class="eyebrow">Price</p>
+    <h2 class="h2">都度払いです。<br>コース契約はありません。</h2>
+    <p class="lead">1回ごとにお支払いいただき、途中でやめることができます。</p>
+    <ul class="plans">
+      <li class="plan">
+        <h3 class="plan__n">初回カウンセリング</h3>
+        <p class="plan__d">診察・肌診断・治療計画の作成まで</p>
+        <p class="plan__p">0<i>円</i></p>
+        <ul class="plan__f"><li>皮膚科専門医の診察</li><li>ダーモスコピー診断</li><li>治療計画書の発行</li></ul>
+      </li>
+      <li class="plan plan--on">
+        <span class="plan__flag">相談が最も多い</span>
+        <h3 class="plan__n">レーザートーニング</h3>
+        <p class="plan__d">肝斑・広範囲の色ムラに</p>
+        <p class="plan__p">22,000<i>円／回</i></p>
+        <ul class="plan__f"><li>顔全体</li><li>施術 約20分</li><li>ダウンタイムほぼなし</li><li>内服併用の目安 8回</li></ul>
+      </li>
+      <li class="plan">
+        <h3 class="plan__n">Qスイッチレーザー</h3>
+        <p class="plan__d">境界のはっきりしたシミに</p>
+        <p class="plan__p">11,000<i>円〜／1個</i></p>
+        <ul class="plan__f"><li>直径5mmまで</li><li>1回で完了する場合が多い</li><li>約1週間の保護テープ</li></ul>
+      </li>
+    </ul>
+    <p class="fine">表示価格は税込です。自由診療のため健康保険は適用されません。麻酔・薬剤費が別途必要な場合は、必ず事前にご説明します。</p>
+  </div>
+</section>
+
+<!-- ════ FAQ ════ -->
+<section class="sect sect--deep" id="faq">
+  <div class="well rv">
+    <p class="eyebrow">FAQ</p>
+    <h2 class="h2">よくあるご質問</h2>
+    <div class="faq">
+      <details><summary>痛みはどのくらいですか。</summary><div class="faq__a"><p style="margin:0">トーニングは輪ゴムで軽く弾かれる程度で、麻酔は通常使いません。Qスイッチは一瞬強い痛みがあるため、ご希望に応じて麻酔クリームを使用します（別途3,300円）。</p></div></details>
+      <details><summary>翌日から仕事に行けますか。</summary><div class="faq__a"><p style="margin:0">トーニングは施術直後からメイクが可能です。Qスイッチは約1週間の保護テープが必要で、上からメイクできますが、隠しきれない場合があります。連休前の施術をおすすめしています。</p></div></details>
+      <details><summary>他院で受けて効果がありませんでした。</summary><div class="faq__a"><p style="margin:0">肝斑にQスイッチを当てていた、というケースが少なくありません。初回に診断からやり直しますので、これまでの施術履歴が分かるものをお持ちください。</p></div></details>
+      <details><summary>妊娠中・授乳中でも受けられますか。</summary><div class="faq__a"><p style="margin:0">内服治療は行えません。レーザーについても、ホルモン変動の影響で結果が安定しないため、卒乳後をおすすめしています。</p></div></details>
+      <details><summary>予約はキャンセルできますか。</summary><div class="faq__a"><p style="margin:0">前日18時までのご連絡でキャンセル料はかかりません。それ以降は3,300円を申し受けます。</p></div></details>
+    </div>
+  </div>
+</section>
+
+<!-- ════ フォーム ════ -->
+<section class="sect" id="contact">
+  <div class="well rv">
+    <p class="eyebrow">Reservation</p>
+    <h2 class="h2">無料カウンセリングの<br>ご予約</h2>
+    <p class="lead">担当者より2営業日以内にご連絡します。しつこい勧誘は一切いたしません。</p>
+
+    <div class="done" id="done" role="status" aria-live="polite">
+      <div class="done__m"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <h3>ご予約を受け付けました</h3>
+      <p>2営業日以内に、ご記入のお電話番号へご連絡いたします。<br>控えのメールをお送りしていますのでご確認ください。</p>
+    </div>
+
+    <form class="form" id="form" novalidate>
+      <div class="fld" data-f="name"><label for="i-name">お名前<span class="req">必須</span></label><input id="i-name" name="name" type="text" autocomplete="name" placeholder="白木 咲良"><p class="err">お名前をご入力ください</p></div>
+      <div class="fld" data-f="tel"><label for="i-tel">電話番号<span class="req">必須</span></label><input id="i-tel" name="tel" type="tel" inputmode="tel" autocomplete="tel" placeholder="09012345678"><p class="err">電話番号をご確認ください</p></div>
+      <div class="fld" data-f="email"><label for="i-email">メールアドレス<span class="req">必須</span></label><input id="i-email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="example@mail.com"><p class="err">メールアドレスをご確認ください</p></div>
+      <div class="fld"><label for="i-date">ご希望日<span class="opt">任意</span></label><input id="i-date" name="preferredDate" type="date"></div>
+      <div class="fld"><label for="i-msg">ご相談内容<span class="opt">任意</span></label><textarea id="i-msg" name="message" placeholder="気になっていることをご自由にお書きください"></textarea></div>
+
+      <input type="hidden" name="concerns" id="i-concerns">
+      <input type="hidden" name="pageUrl" id="i-url">
+      <div class="sr" aria-hidden="true"><label for="i-hp">入力しないでください</label><input id="i-hp" name="company" type="text" tabindex="-1" autocomplete="off"></div>
+
+      <p class="status" id="status" role="alert"></p>
+      <button type="submit" class="btn" data-cta="form">この内容で予約する<small>入力 約40秒</small></button>
+      <p class="privacy">ご記入いただいた情報は、ご予約の確認とご連絡にのみ使用します。第三者への提供は行いません。</p>
+    </form>
+  </div>
+</section>
+
+<footer class="ft">
+  <div class="well">
+    <div class="ft__mark"><div class="ft__ja">白露皮膚科クリニック</div><div class="ft__en">HAKURO DERMATOLOGY</div></div>
+    <div class="ft__pic"><img src="./images/clinic-01.svg" alt="院内" width="1000" height="750" loading="lazy"></div>
+    <dl>
+      <dt>所在地</dt><dd>東京都中央区銀座4-8-1 白露ビル5F</dd>
+      <dt>アクセス</dt><dd>東京メトロ銀座駅 A2出口 徒歩3分</dd>
+      <dt>電話</dt><dd>03-1234-5678</dd>
+      <dt>診療時間</dt><dd>10:00–19:00（最終受付 18:00）</dd>
+      <dt>休診日</dt><dd>木曜・日曜</dd>
+    </dl>
+    <p class="ft__cp">© HAKURO DERMATOLOGY CLINIC — 架空クライアントによる制作サンプルです</p>
+  </div>
+</footer>
+
+<div class="bar" id="bar">
+  <a class="bar__tel" href="tel:0312345678" data-cta="bar-tel" aria-label="電話をかける">
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 3h2.9l1.5 3.7-1.9 1.1a11.5 11.5 0 005.1 5.1l1.1-1.9L19 12.5v2.9a1.6 1.6 0 01-1.7 1.6A14 14 0 015 6.7 1.6 1.6 0 016.6 3z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+    <span>TEL</span>
+  </a>
+  <a class="btn" href="#contact" data-cta="bar">無料カウンセリング予約<small>所要30分・当日契約なし</small></a>
+</div>
+
+<script>
+(function(){
+  'use strict';
+  var track=function(n,p){ if(typeof window.gtag==='function') window.gtag(n,p||{}); };
+
+  /* ── 悩みチップ → フォーム引き継ぎ ─────────────────────── */
+  var chips=[].slice.call(document.querySelectorAll('.chip'));
+  var tally=document.getElementById('tally');
+  var tallyN=tally.querySelector('[data-n]');
+  var hidden=document.getElementById('i-concerns');
+  var msg=document.getElementById('i-msg');
+  var typed=false;
+  msg.addEventListener('input',function(){typed=true;});
+
+  function sync(){
+    var on=chips.filter(function(c){return c.getAttribute('aria-pressed')==='true';});
+    var labels=on.map(function(c){return c.dataset.l;});
+    tallyN.textContent=on.length;
+    tally.setAttribute('data-on',on.length?'true':'false');
+    hidden.value=labels.join(' / ');
+    if(!typed){
+      msg.value=labels.length?labels.map(function(l){return '・'+l;}).join('\n')+'\n\n上記について相談したいです。':'';
+    }
+  }
+  chips.forEach(function(c){
+    c.addEventListener('click',function(){
+      var next=c.getAttribute('aria-pressed')!=='true';
+      c.setAttribute('aria-pressed',String(next));
+      sync();
+      if(next) track('concern_select',{label:c.dataset.l});
+    });
+  });
+
+  /* ── Before/After スライダー ────────────────────────────
+     range input を透明で全面に重ねている。こうするとドラッグ・
+     タップ・キーボード操作・スクリーンリーダーが全部無料でついてくる。
+     自前の pointer イベント実装より事故が少ない。              */
+  [].slice.call(document.querySelectorAll('[data-ba]')).forEach(function(stage){
+    var range=stage.querySelector('.ba__range');
+    var seen=false;
+    var apply=function(){
+      stage.style.setProperty('--pos',range.value+'%');
+      if(!seen){seen=true;track('ba_interact');}
+    };
+    range.addEventListener('input',apply);
+    apply();
+  });
+
+  /* ── 固定バー ───────────────────────────────────────── */
+  var bar=document.getElementById('bar'),hero=document.querySelector('.hero'),ct=document.getElementById('contact');
+  function toggleBar(){
+    var passed=hero.getBoundingClientRect().bottom<0;
+    var atForm=ct.getBoundingClientRect().top<window.innerHeight*0.85;
+    bar.setAttribute('data-on',(passed&&!atForm)?'true':'false');
+  }
+  toggleBar();
+  window.addEventListener('scroll',toggleBar,{passive:true});
+  window.addEventListener('resize',toggleBar,{passive:true});
+
+  /* ── スクロール表出 ─────────────────────────────────── */
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){e.target.setAttribute('data-in','true');io.unobserve(e.target);} });
+  },{rootMargin:'0px 0px -12% 0px'});
+  [].slice.call(document.querySelectorAll('.rv')).forEach(function(el){io.observe(el);});
+
+  /* ── CTA計測 ───────────────────────────────────────── */
+  [].slice.call(document.querySelectorAll('[data-cta]')).forEach(function(el){
+    el.addEventListener('click',function(){track('cta_click',{position:el.dataset.cta});});
+  });
+
+  /* ── フォーム ───────────────────────────────────────── */
+  var form=document.getElementById('form'),status=document.getElementById('status'),done=document.getElementById('done');
+  var started=false;
+  form.addEventListener('input',function(){ if(!started){started=true;track('form_start');} });
+
+  function bad(name,is){
+    var f=form.querySelector('[data-f="'+name+'"]');
+    if(f) f.setAttribute('data-bad',String(is));
+  }
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var btn=form.querySelector('button[type=submit]');
+    var fd=new FormData(form),d={};
+    fd.forEach(function(v,k){d[k]=String(v);});
+    d.pageUrl=location.href;
+
+    var ok=true;
+    [['name',d.name.trim().length>0],
+     ['tel',/^[0-9+\-() ]{10,}$/.test(d.tel.trim())],
+     ['email',/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(d.email.trim())]
+    ].forEach(function(p){ bad(p[0],!p[1]); if(!p[1]) ok=false; });
+    if(!ok){ var first=form.querySelector('[data-bad="true"] input'); if(first) first.focus(); return; }
+
+    btn.disabled=true; btn.textContent='送信中…'; status.removeAttribute('data-on');
+
+    fetch('/api/reservations',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)})
+      .then(function(r){ if(!r.ok) throw 0;
+        track('form_submit',{concerns:d.concerns});
+        form.style.display='none';
+        done.setAttribute('data-on','true');
+        done.scrollIntoView({behavior:'smooth',block:'center'});
+      })
+      .catch(function(){
+        status.setAttribute('data-on','');
+        status.textContent='送信できませんでした。恐れ入りますが、お電話（03-1234-5678）でご連絡ください。';
+        btn.disabled=false; btn.textContent='この内容で予約する';
+      });
+  });
+})();
+</script>
+</body>
+</html>
